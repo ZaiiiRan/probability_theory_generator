@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:probability_theory_generator"
         mc:Ignorable="d"
-        Title="Chapter1" Height="202" Width="322">
+        Title="Выбор задач главы 1" Height="202" Width="322" ResizeMode="NoResize">
     <Grid RenderTransformOrigin="0.522,0.508" Margin="0,0,0,-23">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="62*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <CheckBox x:Name="task1CheckBox" Content="Задача 1 (Библиотекарь)" HorizontalAlignment="Left" Margin="26,37,0,0" VerticalAlignment="Top" Width="177" Height="15"/>
+        <CheckBox x:Name="task1CheckBox" Content="Задача 1 (Библиотекарь)" HorizontalAlignment="Left" Margin="26,37,0,0" VerticalAlignment="Top" Width="177" Height="15" Grid.ColumnSpan="2"/>
         <CheckBox x:Name="task2CheckBox" Content="Задача 2 (Пирожки)" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="155" Height="15"/>
-        <Label Content="Выберете задачи из первой главы:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="255" Height="26"/>
-        <Button Content="ОК" HorizontalAlignment="Center" Margin="0,126,0,0" VerticalAlignment="Top" Width="148" Height="20" Click="Button_Click"/>
+        <Label Content="Выберете задачи из первой главы:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="255" Height="26" Grid.ColumnSpan="2"/>
+        <Button Content="ОК" HorizontalAlignment="Left" Margin="87,126,0,0" VerticalAlignment="Top" Width="148" Height="20" Click="Button_Click" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

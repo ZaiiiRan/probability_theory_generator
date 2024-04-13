@@ -60,6 +60,8 @@ namespace probability_theory_generator
             }
             string tasks = "";
             string answers = "";
+
+            //после реализации всех глав этот try catch уберем
             try
             {
                 for (int i = 1; i <= count; i++)
