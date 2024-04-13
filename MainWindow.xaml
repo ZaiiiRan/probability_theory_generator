@@ -17,21 +17,21 @@
                     <TranslateTransform X="-0.479"/>
                 </TransformGroup>
             </Menu.RenderTransform>
-            <MenuItem x:Name="Chapter1MenuItem" Header="Глава 1" Height="24" Click="MenuItem_Click"/>
-            <MenuItem x:Name="Chapter2MenuItem" Header="Глава 2" Height="24"></MenuItem>
-            <MenuItem x:Name="Chapter3MenuItem" Header="Глава 3" Height="24"></MenuItem>
-            <MenuItem x:Name="Chapter4MenuItem" Header="Глава 4" Height="24"></MenuItem>
-            <MenuItem x:Name="Chapter5MenuItem" Header="Глава 5" Height="24"></MenuItem>
-            <MenuItem x:Name="Chapter7MenuItem" Header="Глава 7" Height="24"></MenuItem>
+            <MenuItem x:Name="Chapter1MenuItem" Header="Глава 1" Height="24" Click="MenuItem_Click" IsEnabled="False"/>
+            <MenuItem x:Name="Chapter2MenuItem" Header="Глава 2" Height="24" IsEnabled="False"></MenuItem>
+            <MenuItem x:Name="Chapter3MenuItem" Header="Глава 3" Height="24" IsEnabled="False"></MenuItem>
+            <MenuItem x:Name="Chapter4MenuItem" Header="Глава 4" Height="24" IsEnabled="False"></MenuItem>
+            <MenuItem x:Name="Chapter5MenuItem" Header="Глава 5" Height="24" IsEnabled="False"></MenuItem>
+            <MenuItem x:Name="Chapter7MenuItem" Header="Глава 7" Height="24" IsEnabled="False"></MenuItem>
         </Menu>
         <Label Content="Выберете нужные главы:" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="219"/>
-        <CheckBox x:Name="chapter1CheckBox" Content="Глава 1" HorizontalAlignment="Left" Margin="33,64,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chapter3CheckBox" Content="Глава 3" HorizontalAlignment="Left" Margin="33,115,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chapter2CheckBox" Content="Глава 2" HorizontalAlignment="Left" Margin="33,89,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chapter7CheckBox" Content="Глава 7" HorizontalAlignment="Left" Margin="33,188,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chapter5CheckBox" Content="Глава 5" HorizontalAlignment="Left" Margin="33,164,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chapter4CheckBox" Content="Глава 4" HorizontalAlignment="Left" Margin="33,140,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="variantsCount" HorizontalAlignment="Left" Margin="199,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="201" Height="26"/>
+        <CheckBox x:Name="chapter1CheckBox" Content="Глава 1" HorizontalAlignment="Left" Margin="33,64,0,0" VerticalAlignment="Top" Checked="chapter1CheckBox_Checked" Unchecked="chapter1CheckBox_Unchecked"/>
+        <CheckBox x:Name="chapter3CheckBox" Content="Глава 3" HorizontalAlignment="Left" Margin="33,115,0,0" VerticalAlignment="Top" Checked="chapter3CheckBox_Checked" Unchecked="chapter3CheckBox_Unchecked"/>
+        <CheckBox x:Name="chapter2CheckBox" Content="Глава 2" HorizontalAlignment="Left" Margin="33,89,0,0" VerticalAlignment="Top" Checked="chapter2CheckBox_Checked" Unchecked="chapter2CheckBox_Unchecked"/>
+        <CheckBox x:Name="chapter7CheckBox" Content="Глава 7" HorizontalAlignment="Left" Margin="33,188,0,0" VerticalAlignment="Top" Checked="chapter7CheckBox_Checked" Unchecked="chapter7CheckBox_Unchecked"/>
+        <CheckBox x:Name="chapter5CheckBox" Content="Глава 5" HorizontalAlignment="Left" Margin="33,164,0,0" VerticalAlignment="Top" Checked="chapter5CheckBox_Checked" Unchecked="chapter5CheckBox_Unchecked"/>
+        <CheckBox x:Name="chapter4CheckBox" Content="Глава 4" HorizontalAlignment="Left" Margin="33,140,0,0" VerticalAlignment="Top" Checked="chapter4CheckBox_Checked" Unchecked="chapter4CheckBox_Unchecked"/>
+        <TextBox x:Name="variantsCount" HorizontalAlignment="Left" Margin="199,237,0,0" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="201" Height="26"/>
         <Label Content="Введите количество вариантов: " HorizontalAlignment="Left" Margin="10,237,0,0" VerticalAlignment="Top" Width="184"/>
     </Grid>
 </Window>

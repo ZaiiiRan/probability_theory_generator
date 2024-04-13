@@ -52,10 +52,11 @@ namespace probability_theory_generator
             try
             {
                 count = Convert.ToInt32(variantsCount.Text);
+                if (count < 1) throw new ArgumentException();
             }
             catch
             {
-                MessageBox.Show("Количество вариантов должно быть целочисленным положительным числом!");
+                MessageBox.Show("Количество вариантов должно быть целочисленным положительным числом в диапазоне [1, 500]!");
                 return;
             }
             string tasks = "";
@@ -106,5 +107,29 @@ namespace probability_theory_generator
             Chapter1 chapter1 = new(selectedTasks[1]);
             chapter1.Show();
         }
+
+        private void chapter1CheckBox_Checked(object sender, RoutedEventArgs e) => Chapter1MenuItem.IsEnabled = true;
+
+        private void chapter1CheckBox_Unchecked(object sender, RoutedEventArgs e) => Chapter1MenuItem.IsEnabled=false;
+
+        private void chapter2CheckBox_Checked(object sender, RoutedEventArgs e) => Chapter2MenuItem.IsEnabled = true;
+
+        private void chapter2CheckBox_Unchecked(object sender, RoutedEventArgs e) => Chapter2MenuItem.IsEnabled=false;
+
+        private void chapter3CheckBox_Checked(object sender, RoutedEventArgs e) => Chapter3MenuItem.IsEnabled = true;
+
+        private void chapter3CheckBox_Unchecked(object sender, RoutedEventArgs e) => Chapter3MenuItem.IsEnabled=false;
+
+        private void chapter4CheckBox_Checked(object sender, RoutedEventArgs e) => Chapter4MenuItem.IsEnabled = true;
+
+        private void chapter4CheckBox_Unchecked(object sender, RoutedEventArgs e) => Chapter4MenuItem.IsEnabled = false;
+
+        private void chapter5CheckBox_Checked(object sender, RoutedEventArgs e) => Chapter5MenuItem.IsEnabled = true;
+
+        private void chapter5CheckBox_Unchecked(object sender, RoutedEventArgs e) => Chapter5MenuItem.IsEnabled=false;
+
+        private void chapter7CheckBox_Checked(object sender, RoutedEventArgs e) => Chapter7MenuItem.IsEnabled = true;
+
+        private void chapter7CheckBox_Unchecked(object sender, RoutedEventArgs e) => Chapter7MenuItem.IsEnabled = false;
     }
 }
