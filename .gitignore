@@ -1,7 +1,3 @@
+/.vs
 /bin
 /obj
-/.vs
-
-probability_theory_generator.sln
-probability_theory_generator.csproj.user
-probability_theory_generator.csproj
