@@ -22,6 +22,7 @@ namespace probability_theory_generator
         public static long NumberOfCombinations(int n, int k)
         {
             if (n == k) return 1;
+            if (k == 1) return n;
             return Factorial(n) / (Factorial(k) * Factorial(n - k));
         }
     }
