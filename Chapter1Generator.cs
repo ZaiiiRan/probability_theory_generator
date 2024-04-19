@@ -9,10 +9,10 @@ namespace probability_theory_generator
 {
     public static class Chapter1Generator
     {
+        private static readonly Random r = new Random();
         public static FinishedTask GenerateTask1()
         {
             int r1 = 3, r2 = 8;
-            Random r = new Random();
             int X = r.Next(r1, r2);
             int A = r.Next(1, X - X / 2);
             int B = r.Next(A + 1, X);
@@ -37,7 +37,6 @@ namespace probability_theory_generator
         public static FinishedTask GenerateTask2()
         {
             int r1 = 2, r2 = 5;
-            Random r = new Random();
             int A = r.Next(r1, r2);
             int B = r.Next(r1, r2);
             int C = r.Next(r1, r2);

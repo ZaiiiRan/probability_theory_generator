@@ -9,9 +9,9 @@ namespace probability_theory_generator
 {
     internal class Chapter2Generator
     {
+        private static readonly Random random = new Random();
         public static FinishedTask GenerateTask1()
         {
-            Random random = new Random();
             int r1 = 1, r2 = 7;
             int x = random.Next(r1, r2);
             int z = random.Next(r1, r2);
@@ -113,7 +113,6 @@ namespace probability_theory_generator
         }
         public static FinishedTask GenerateTask2()
         {
-            Random random = new Random();
             double x = Math.Round(random.NextDouble() * (1.0 - 0.1) + 0.1, 1);
             double y = Math.Round(random.NextDouble() * (1.0 - 0.1) + 0.1, 1);
 
@@ -147,7 +146,6 @@ namespace probability_theory_generator
         }
         public static FinishedTask GenerateTask3()
         {
-            Random random = new Random();
             int x = random.Next(1, 10);
             int y = random.Next(1, 10);
             int z = random.Next(1, 10);
@@ -160,7 +158,7 @@ namespace probability_theory_generator
             text = text.Replace("X", x.ToString());
             text = text.Replace("Y", y.ToString());
             text = text.Replace("Z", z.ToString());
-            string answer = $"{Math.Round(a)}";
+            string answer = $"{Math.Round(a, 5)}";
             FinishedTask finishedTask = new FinishedTask(text, answer);
             return finishedTask;
         }

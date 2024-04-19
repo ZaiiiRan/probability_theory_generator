@@ -51,7 +51,7 @@ namespace probability_theory_generator
             try
             {
                 count = Convert.ToInt32(variantsCount.Text);
-                if (count < 1) throw new ArgumentException();
+                if (count < 1 && count > 500) throw new ArgumentException();
             }
             catch
             {
@@ -117,8 +117,9 @@ namespace probability_theory_generator
                     answers += "\n\n";
                 }
 
-                FileWriter.Write(tasks + answers);
-                MessageBox.Show("Варианты записаны в файл!");
+                FileWriter.WriteToDOCX(tasks + answers);
+                //.Write(tasks + answers);
+                //MessageBox.Show("Варианты записаны в файл!");
             }
             catch (Exception ex)
             {
