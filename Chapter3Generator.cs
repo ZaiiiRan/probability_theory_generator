@@ -67,14 +67,26 @@ namespace probability_theory_generator
             double y = Math.Round(random.NextDouble() * (1.0 - 0.1) + 0.1, 1);
             double a = Math.Round(random.NextDouble() * (1.0 - 0.1) + 0.1, 1);
             double b = Math.Round(random.NextDouble() * (1.0 - 0.1) + 0.1, 1);
-
+            double p = x * a + y * b;
+            double p1 = 0.0, p2 = 0.0;
+            Task Solve1 = new Task(() =>
+            {
+                p1 = (x * a) / p; 
+            });
+            Task Solve2 = new Task(() =>
+            {
+                p2 = (y * b) / p;
+            });
+            Solve1.Start();
+            Solve2.Start();
+            Task.WaitAll(Solve1, Solve2);
+            string answer = (p1 > p2) ? "У" : "УУ"; 
             TaskTemplate template = JSONReader.ReadJSON("Chapter3Task3.json");
             string text = template.Text;
             text = text.Replace("X", x.ToString());
             text = text.Replace("Y", y.ToString());
             text = text.Replace("A", a.ToString());
             text = text.Replace("B", b.ToString());
-            string answer = $"";
             FinishedTask finishedTask = new FinishedTask(text, answer);
             return finishedTask;
         }
