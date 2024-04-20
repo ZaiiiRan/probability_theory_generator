@@ -74,6 +74,13 @@
       <DependentUpon>Chapter3Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Chapter3Generator.cs" />
+    <Compile Include="Chapter4Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chapter4Form.Designer.cs">
+      <DependentUpon>Chapter4Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chapter4Generator.cs" />
     <Compile Include="FileWriter.cs" />
     <Compile Include="FinishedTask.cs" />
     <Compile Include="Form1.cs">
@@ -95,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chapter3Form.resx">
       <DependentUpon>Chapter3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chapter4Form.resx">
+      <DependentUpon>Chapter4Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -38,6 +38,9 @@ namespace probability_theory_generator
                         tasks.Add(3, false);
                         break;
                     case 4:
+                        tasks.Add(1, false);
+                        tasks.Add(2, false);
+                        tasks.Add(3, false);
                         break;
                     case 5:
                         break;
@@ -141,6 +144,31 @@ namespace probability_theory_generator
                         }
                     }
 
+                    if (chapter4CheckBox.Checked == true)
+                    {
+                        if (selectedTasks[4][1] == true)
+                        {
+                            t = Chapter4Generator.GenerateTask1();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n";
+                            j++;
+                        }
+                        if (selectedTasks[4][2] == true)
+                        {
+                            t = Chapter4Generator.GenerateTask2();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n";
+                            j++;
+                        }
+                        if (selectedTasks[4][3] == true)
+                        {
+                            t = Chapter4Generator.GenerateTask3();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n";
+                            j++;
+                        }
+                    }
+
                     tasks += "\n\n";
                     answers += "\n\n";
                 }
@@ -208,6 +236,12 @@ namespace probability_theory_generator
         {
             Chapter3Form chapter3 = new Chapter3Form(selectedTasks[3]);
             chapter3.Show();
+        }
+
+        private void chapter4MenuItem_Click(object sender, EventArgs e)
+        {
+            Chapter4Form chapter4 = new Chapter4Form(selectedTasks[4]);
+            chapter4.Show();
         }
     }
 }
