@@ -120,6 +120,9 @@ namespace probability_theory_generator
                     {
                         if (selectedTasks[3][1] == true)
                         {
+                            t = Chapter3Generator.GenerateTask1();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n";
                             j++;
                         }
                         if (selectedTasks[3][2] == true)
