@@ -33,6 +33,9 @@ namespace probability_theory_generator
                         tasks.Add(3, false);
                         break;
                     case 3:
+                        tasks.Add(1, false);
+                        tasks.Add(2, false);
+                        tasks.Add(3, false);
                         break;
                     case 4:
                         break;
@@ -113,6 +116,28 @@ namespace probability_theory_generator
                         }
                     }
 
+                    if (chapter3CheckBox.Checked == true)
+                    {
+                        if (selectedTasks[3][1] == true)
+                        {
+                            j++;
+                        }
+                        if (selectedTasks[3][2] == true)
+                        {
+                            t = Chapter3Generator.GenerateTask2();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n"; 
+                            j++;
+                        }
+                        if (selectedTasks[3][3] == true)
+                        {
+                            t = Chapter3Generator.GenerateTask3();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n";
+                            j++;
+                        }
+                    }
+
                     tasks += "\n\n";
                     answers += "\n\n";
                 }
@@ -174,6 +199,12 @@ namespace probability_theory_generator
         {
             if (chapter7CheckBox.Checked) chapter7MenuItem.Enabled = true;
             else chapter7MenuItem.Enabled = false;
+        }
+
+        private void chapter3MenuItem_Click(object sender, EventArgs e)
+        {
+            Chapter3Form chapter3 = new Chapter3Form(selectedTasks[3]);
+            chapter3.Show();
         }
     }
 }
