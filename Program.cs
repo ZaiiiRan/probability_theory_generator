@@ -14,6 +14,7 @@ namespace probability_theory_generator
         [STAThread]
         static void Main()
         {
+            Settings.LoadSettings();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

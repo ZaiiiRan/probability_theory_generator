@@ -45,6 +45,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.variantsCount = new System.Windows.Forms.TextBox();
             this.goButton = new System.Windows.Forms.Button();
+            this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,11 +60,13 @@
             this.chapter3MenuItem,
             this.chapter4MenuItem,
             this.chapter5MenuItem,
-            this.chapter7MenuItem});
+            this.chapter7MenuItem,
+            this.settingsMenuItem,
+            this.infoMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(514, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(623, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,7 +75,7 @@
             this.chapter1MenuItem.Enabled = false;
             this.chapter1MenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter1MenuItem.Name = "chapter1MenuItem";
-            this.chapter1MenuItem.Size = new System.Drawing.Size(68, 22);
+            this.chapter1MenuItem.Size = new System.Drawing.Size(68, 24);
             this.chapter1MenuItem.Text = "Глава 1";
             this.chapter1MenuItem.Click += new System.EventHandler(this.Chapter1MenuItem_Click);
             // 
@@ -80,7 +84,7 @@
             this.chapter2MenuItem.Enabled = false;
             this.chapter2MenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter2MenuItem.Name = "chapter2MenuItem";
-            this.chapter2MenuItem.Size = new System.Drawing.Size(68, 22);
+            this.chapter2MenuItem.Size = new System.Drawing.Size(68, 24);
             this.chapter2MenuItem.Text = "Глава 2";
             this.chapter2MenuItem.Click += new System.EventHandler(this.chapter2MenuItem_Click);
             // 
@@ -89,7 +93,7 @@
             this.chapter3MenuItem.Enabled = false;
             this.chapter3MenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter3MenuItem.Name = "chapter3MenuItem";
-            this.chapter3MenuItem.Size = new System.Drawing.Size(68, 22);
+            this.chapter3MenuItem.Size = new System.Drawing.Size(68, 24);
             this.chapter3MenuItem.Text = "Глава 3";
             this.chapter3MenuItem.Click += new System.EventHandler(this.chapter3MenuItem_Click);
             // 
@@ -98,7 +102,7 @@
             this.chapter4MenuItem.Enabled = false;
             this.chapter4MenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter4MenuItem.Name = "chapter4MenuItem";
-            this.chapter4MenuItem.Size = new System.Drawing.Size(68, 22);
+            this.chapter4MenuItem.Size = new System.Drawing.Size(68, 24);
             this.chapter4MenuItem.Text = "Глава 4";
             this.chapter4MenuItem.Click += new System.EventHandler(this.chapter4MenuItem_Click);
             // 
@@ -107,7 +111,7 @@
             this.chapter5MenuItem.Enabled = false;
             this.chapter5MenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter5MenuItem.Name = "chapter5MenuItem";
-            this.chapter5MenuItem.Size = new System.Drawing.Size(68, 22);
+            this.chapter5MenuItem.Size = new System.Drawing.Size(68, 24);
             this.chapter5MenuItem.Text = "Глава 5";
             this.chapter5MenuItem.Click += new System.EventHandler(this.chapter5MenuItem_Click);
             // 
@@ -116,7 +120,7 @@
             this.chapter7MenuItem.Enabled = false;
             this.chapter7MenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter7MenuItem.Name = "chapter7MenuItem";
-            this.chapter7MenuItem.Size = new System.Drawing.Size(68, 22);
+            this.chapter7MenuItem.Size = new System.Drawing.Size(68, 24);
             this.chapter7MenuItem.Text = "Глава 7";
             this.chapter7MenuItem.Click += new System.EventHandler(this.chapter7MenuItem_Click);
             // 
@@ -241,11 +245,28 @@
             this.goButton.UseVisualStyleBackColor = true;
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
+            // settingsMenuItem
+            // 
+            this.settingsMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.settingsMenuItem.Name = "settingsMenuItem";
+            this.settingsMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.settingsMenuItem.Text = "Параметры";
+            this.settingsMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.settingsMenuItem.Click += new System.EventHandler(this.settingsMenuItem_Click);
+            // 
+            // infoMenuItem
+            // 
+            this.infoMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.infoMenuItem.Name = "infoMenuItem";
+            this.infoMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.infoMenuItem.Text = "О программе";
+            this.infoMenuItem.Click += new System.EventHandler(this.infoMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 306);
+            this.ClientSize = new System.Drawing.Size(623, 306);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.variantsCount);
             this.Controls.Add(this.label2);
@@ -288,6 +309,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox variantsCount;
         private System.Windows.Forms.Button goButton;
+        private System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem infoMenuItem;
     }
 }
 

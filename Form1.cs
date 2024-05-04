@@ -71,6 +71,11 @@ namespace probability_theory_generator
                 MessageBox.Show("Количество вариантов должно быть целочисленным положительным числом в диапазоне [1, 500]!");
                 return;
             }
+            if (Settings.CheckFiles().Count != 0)
+            {
+                MessageBox.Show("Ошибка при загрузке шаблонов задач!");
+                return;
+            }
             string tasks = "";
             string answers = "";
 
@@ -212,7 +217,19 @@ namespace probability_theory_generator
 
                     if (chapter7CheckBox.Checked == true)
                     {
-                        
+                        if (selectedTasks[7][1]) {
+                            t = Chapter7Generator.GenerateTask1();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
+                            j++;
+                        }
+                        if (selectedTasks[7][2])
+                        {
+                            t = Chapter7Generator.GenerateTask2();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
+                            j++;
+                        }
                     }
 
                     tasks += "\n\n";
@@ -302,6 +319,18 @@ namespace probability_theory_generator
         {
             Chapter7Form chapter7 = new Chapter7Form(selectedTasks[7]);
             chapter7.Show();
+        }
+
+        private void settingsMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm form = new SettingsForm();
+            form.ShowDialog();
+        }
+
+        private void infoMenuItem_Click(object sender, EventArgs e)
+        {
+            InfoForm form = new InfoForm();
+            form.ShowDialog();
         }
     }
 }
