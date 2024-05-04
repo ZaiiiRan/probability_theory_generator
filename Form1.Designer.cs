@@ -118,6 +118,7 @@
             this.chapter7MenuItem.Name = "chapter7MenuItem";
             this.chapter7MenuItem.Size = new System.Drawing.Size(68, 22);
             this.chapter7MenuItem.Text = "Глава 7";
+            this.chapter7MenuItem.Click += new System.EventHandler(this.chapter7MenuItem_Click);
             // 
             // label1
             // 

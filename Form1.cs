@@ -49,6 +49,9 @@ namespace probability_theory_generator
                         tasks.Add(4, true);
                         break;
                     case 7:
+                        tasks.Add(1, true);
+                        tasks.Add(2, true);
+                        tasks.Add(3, true);
                         break;
                 }
                 selectedTasks.Add(i, tasks);
@@ -131,21 +134,21 @@ namespace probability_theory_generator
                         {
                             t = Chapter3Generator.GenerateTask1();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
                             j++;
                         }
                         if (selectedTasks[3][2] == true)
                         {
                             t = Chapter3Generator.GenerateTask2();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n"; 
+                            answers += $"{j}) " + t.Answer + "\n"; 
                             j++;
                         }
                         if (selectedTasks[3][3] == true)
                         {
                             t = Chapter3Generator.GenerateTask3();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
                             j++;
                         }
                     }
@@ -156,21 +159,21 @@ namespace probability_theory_generator
                         {
                             t = Chapter4Generator.GenerateTask1();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
                             j++;
                         }
                         if (selectedTasks[4][2] == true)
                         {
                             t = Chapter4Generator.GenerateTask2();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
                             j++;
                         }
                         if (selectedTasks[4][3] == true)
                         {
                             t = Chapter4Generator.GenerateTask3();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
                             j++;
                         }
                     }
@@ -181,30 +184,35 @@ namespace probability_theory_generator
                         {
                             t = Chapter5Generator.GenerateTask1();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
                             j++;
                         }
                         if (selectedTasks[5][2] == true)
                         {
                             t = Chapter5Generator.GenerateTask2();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
                             j++;
                         }
                         if (selectedTasks[5][3] == true)
                         {
                             t = Chapter5Generator.GenerateTask3();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
                             j++;
                         }
                         if (selectedTasks[5][4] == true)
                         {
                             t = Chapter5Generator.GenerateTask4();
                             tasks += $"{j}) " + t.Text + "\n\n";
-                            answers += $"{j}) " + t.Answer + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n";
                             j++;
                         }
+                    }
+
+                    if (chapter7CheckBox.Checked == true)
+                    {
+                        
                     }
 
                     tasks += "\n\n";
@@ -288,6 +296,12 @@ namespace probability_theory_generator
         {
             Chapter5Form chapter5 = new Chapter5Form(selectedTasks[5]);
             chapter5.Show();
+        }
+
+        private void chapter7MenuItem_Click(object sender, EventArgs e)
+        {
+            Chapter7Form chapter7 = new Chapter7Form(selectedTasks[7]);
+            chapter7.Show();
         }
     }
 }
