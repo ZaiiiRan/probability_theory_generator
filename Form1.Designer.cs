@@ -109,6 +109,7 @@
             this.chapter5MenuItem.Name = "chapter5MenuItem";
             this.chapter5MenuItem.Size = new System.Drawing.Size(68, 22);
             this.chapter5MenuItem.Text = "Глава 5";
+            this.chapter5MenuItem.Click += new System.EventHandler(this.chapter5MenuItem_Click);
             // 
             // chapter7MenuItem
             // 
@@ -134,7 +135,7 @@
             this.chapter1CheckBox.AutoSize = true;
             this.chapter1CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter1CheckBox.Location = new System.Drawing.Point(31, 68);
-            this.chapter1CheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chapter1CheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.chapter1CheckBox.Name = "chapter1CheckBox";
             this.chapter1CheckBox.Size = new System.Drawing.Size(87, 24);
             this.chapter1CheckBox.TabIndex = 2;
@@ -147,7 +148,7 @@
             this.chapter2CheckBox.AutoSize = true;
             this.chapter2CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter2CheckBox.Location = new System.Drawing.Point(31, 96);
-            this.chapter2CheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chapter2CheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.chapter2CheckBox.Name = "chapter2CheckBox";
             this.chapter2CheckBox.Size = new System.Drawing.Size(87, 24);
             this.chapter2CheckBox.TabIndex = 3;
@@ -160,7 +161,7 @@
             this.chapter3CheckBox.AutoSize = true;
             this.chapter3CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter3CheckBox.Location = new System.Drawing.Point(31, 124);
-            this.chapter3CheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chapter3CheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.chapter3CheckBox.Name = "chapter3CheckBox";
             this.chapter3CheckBox.Size = new System.Drawing.Size(87, 24);
             this.chapter3CheckBox.TabIndex = 4;
@@ -173,7 +174,7 @@
             this.chapter4CheckBox.AutoSize = true;
             this.chapter4CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter4CheckBox.Location = new System.Drawing.Point(31, 152);
-            this.chapter4CheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chapter4CheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.chapter4CheckBox.Name = "chapter4CheckBox";
             this.chapter4CheckBox.Size = new System.Drawing.Size(87, 24);
             this.chapter4CheckBox.TabIndex = 5;
@@ -186,7 +187,7 @@
             this.chapter5CheckBox.AutoSize = true;
             this.chapter5CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter5CheckBox.Location = new System.Drawing.Point(31, 180);
-            this.chapter5CheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chapter5CheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.chapter5CheckBox.Name = "chapter5CheckBox";
             this.chapter5CheckBox.Size = new System.Drawing.Size(87, 24);
             this.chapter5CheckBox.TabIndex = 6;
@@ -199,7 +200,7 @@
             this.chapter7CheckBox.AutoSize = true;
             this.chapter7CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chapter7CheckBox.Location = new System.Drawing.Point(31, 208);
-            this.chapter7CheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chapter7CheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.chapter7CheckBox.Name = "chapter7CheckBox";
             this.chapter7CheckBox.Size = new System.Drawing.Size(87, 24);
             this.chapter7CheckBox.TabIndex = 7;
@@ -222,7 +223,7 @@
             // 
             this.variantsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variantsCount.Location = new System.Drawing.Point(308, 250);
-            this.variantsCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.variantsCount.Margin = new System.Windows.Forms.Padding(2);
             this.variantsCount.Name = "variantsCount";
             this.variantsCount.Size = new System.Drawing.Size(148, 26);
             this.variantsCount.TabIndex = 9;
@@ -231,7 +232,7 @@
             // 
             this.goButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goButton.Location = new System.Drawing.Point(308, 124);
-            this.goButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.goButton.Margin = new System.Windows.Forms.Padding(2);
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(148, 43);
             this.goButton.TabIndex = 10;
@@ -257,7 +258,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Генератор вариантов";
             this.menuStrip1.ResumeLayout(false);

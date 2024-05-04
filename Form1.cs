@@ -24,25 +24,29 @@ namespace probability_theory_generator
                 switch (i)
                 {
                     case 1:
-                        tasks.Add(1, false);
-                        tasks.Add(2, false);
+                        tasks.Add(1, true);
+                        tasks.Add(2, true);
                         break;
                     case 2:
-                        tasks.Add(1, false);
-                        tasks.Add(2, false);
-                        tasks.Add(3, false);
+                        tasks.Add(1, true);
+                        tasks.Add(2, true);
+                        tasks.Add(3, true);
                         break;
                     case 3:
-                        tasks.Add(1, false);
-                        tasks.Add(2, false);
-                        tasks.Add(3, false);
+                        tasks.Add(1, true);
+                        tasks.Add(2, true);
+                        tasks.Add(3, true);
                         break;
                     case 4:
-                        tasks.Add(1, false);
-                        tasks.Add(2, false);
-                        tasks.Add(3, false);
+                        tasks.Add(1, true);
+                        tasks.Add(2, true);
+                        tasks.Add(3, true);
                         break;
                     case 5:
+                        tasks.Add(1, true);
+                        tasks.Add(2, true);
+                        tasks.Add(3, true);
+                        tasks.Add(4, true);
                         break;
                     case 7:
                         break;
@@ -66,6 +70,8 @@ namespace probability_theory_generator
             }
             string tasks = "";
             string answers = "";
+
+            goButton.Enabled = false;
 
             //после реализации всех глав этот try catch уберем
             try
@@ -169,6 +175,24 @@ namespace probability_theory_generator
                         }
                     }
 
+                    if (chapter5CheckBox.Checked == true)
+                    {
+                        if (selectedTasks[5][1] == true)
+                        {
+                            t = Chapter5Generator.GenerateTask1();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n";
+                            j++;
+                        }
+                        if (selectedTasks[5][2] == true)
+                        {
+                            t = Chapter5Generator.GenerateTask2();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n";
+                            j++;
+                        }
+                    }
+
                     tasks += "\n\n";
                     answers += "\n\n";
                 }
@@ -181,6 +205,8 @@ namespace probability_theory_generator
             {
                 MessageBox.Show(ex.ToString());
             }
+
+            goButton.Enabled = true;
 
         }
 
@@ -242,6 +268,12 @@ namespace probability_theory_generator
         {
             Chapter4Form chapter4 = new Chapter4Form(selectedTasks[4]);
             chapter4.Show();
+        }
+
+        private void chapter5MenuItem_Click(object sender, EventArgs e)
+        {
+            Chapter5Form chapter5 = new Chapter5Form(selectedTasks[5]);
+            chapter5.Show();
         }
     }
 }
