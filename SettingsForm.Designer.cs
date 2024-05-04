@@ -110,7 +110,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SettingsForm";
-            this.Text = "Настройки";
+            this.Text = "Параметры";
             this.ResumeLayout(false);
             this.PerformLayout();
 

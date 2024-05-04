@@ -31,6 +31,7 @@ namespace probability_theory_generator
                 Settings.JSONDirectory = folderBrowserDialog.SelectedPath;
                 linkLabel1.Text = Settings.JSONDirectory;
                 Settings.SaveSettings();
+                UpdateErrors();
             }
         }
 
