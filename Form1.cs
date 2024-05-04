@@ -191,6 +191,20 @@ namespace probability_theory_generator
                             answers += $"{j}) " + t.Answer + "\n\n";
                             j++;
                         }
+                        if (selectedTasks[5][3] == true)
+                        {
+                            t = Chapter5Generator.GenerateTask3();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n";
+                            j++;
+                        }
+                        if (selectedTasks[5][4] == true)
+                        {
+                            t = Chapter5Generator.GenerateTask4();
+                            tasks += $"{j}) " + t.Text + "\n\n";
+                            answers += $"{j}) " + t.Answer + "\n\n";
+                            j++;
+                        }
                     }
 
                     tasks += "\n\n";
