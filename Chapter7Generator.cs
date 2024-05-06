@@ -56,5 +56,27 @@ namespace probability_theory_generator
             FinishedTask task = new FinishedTask(text , answer);
             return task;
         }
+        public static FinishedTask GenerateTask3()
+        {
+            int v = random.Next(7, 13);
+            int b = random.Next(18, 26);
+            double p = Math.Round(0.1 + random.NextDouble() * (0.9 - 0.2), 1);
+            int c = random.Next(0, 5);
+
+            string sigma = $"Ф({b - v} / σ) = {p}";
+            string probability = $"P({c} < X < {v}) = - Ф({c - v} / σ)";
+
+            TaskTemplate template = JSONReader.ReadJSON("Chapter7Task3.json");
+            string text = template.Text;
+            text = text.Replace("v", v.ToString());
+            text = text.Replace("b", b.ToString());
+            text = text.Replace("y", p.ToString());
+            text = text.Replace("c", c.ToString());
+
+            string answer = $"Шаг 1) {sigma} \nШаг 2) {probability}";
+
+            FinishedTask task = new FinishedTask(text, answer);
+            return task;
+        }
     }
 }
