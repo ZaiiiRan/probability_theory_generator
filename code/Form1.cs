@@ -76,7 +76,7 @@ namespace probability_theory_generator
                 MessageBox.Show("Ошибка при загрузке шаблонов задач!");
                 return;
             }
-            string tasks = "Задачи:\n\n";
+            string tasks = "";
             string answers = "Ответы:\n\n";
 
             goButton.Enabled = false;
@@ -238,7 +238,7 @@ namespace probability_theory_generator
                         }
                     }
 
-                    tasks += "\n\n";
+                    tasks += "\f";
                     answers += "\n\n";
                 }
 
