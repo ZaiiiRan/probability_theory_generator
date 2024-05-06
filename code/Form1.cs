@@ -76,12 +76,11 @@ namespace probability_theory_generator
                 MessageBox.Show("Ошибка при загрузке шаблонов задач!");
                 return;
             }
-            string tasks = "";
-            string answers = "";
+            string tasks = "Задачи:\n\n";
+            string answers = "Ответы:\n\n";
 
             goButton.Enabled = false;
 
-            //после реализации всех глав этот try catch уберем
             try
             {
                 for (int i = 1; i <= count; i++)
@@ -244,8 +243,6 @@ namespace probability_theory_generator
                 }
 
                 FileWriter.WriteToDOCX(tasks + answers);
-                //.Write(tasks + answers);
-                //MessageBox.Show("Варианты записаны в файл!");
             }
             catch (Exception ex)
             {
@@ -259,14 +256,51 @@ namespace probability_theory_generator
         public void Chapter1MenuItem_Click(object sender, EventArgs e)
         {
             Chapter1Form chapter1 = new Chapter1Form(selectedTasks[1]);
-            chapter1.Show();
+            chapter1.ShowDialog();
         }
 
         private void chapter2MenuItem_Click(object sender, EventArgs e)
         {
             Chapter2Form chapter2 = new Chapter2Form(selectedTasks[2]);
-            chapter2.Show();
+            chapter2.ShowDialog();
         }
+
+        private void chapter3MenuItem_Click(object sender, EventArgs e)
+        {
+            Chapter3Form chapter3 = new Chapter3Form(selectedTasks[3]);
+            chapter3.ShowDialog();
+        }
+
+        private void chapter4MenuItem_Click(object sender, EventArgs e)
+        {
+            Chapter4Form chapter4 = new Chapter4Form(selectedTasks[4]);
+            chapter4.ShowDialog();
+        }
+
+        private void chapter5MenuItem_Click(object sender, EventArgs e)
+        {
+            Chapter5Form chapter5 = new Chapter5Form(selectedTasks[5]);
+            chapter5.ShowDialog();
+        }
+
+        private void chapter7MenuItem_Click(object sender, EventArgs e)
+        {
+            Chapter7Form chapter7 = new Chapter7Form(selectedTasks[7]);
+            chapter7.ShowDialog();
+        }
+
+        private void settingsMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm form = new SettingsForm();
+            form.ShowDialog();
+        }
+
+        private void infoMenuItem_Click(object sender, EventArgs e)
+        {
+            InfoForm form = new InfoForm();
+            form.ShowDialog();
+        }
+
 
         private void chapter1CheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -302,42 +336,6 @@ namespace probability_theory_generator
         {
             if (chapter7CheckBox.Checked) chapter7MenuItem.Enabled = true;
             else chapter7MenuItem.Enabled = false;
-        }
-
-        private void chapter3MenuItem_Click(object sender, EventArgs e)
-        {
-            Chapter3Form chapter3 = new Chapter3Form(selectedTasks[3]);
-            chapter3.Show();
-        }
-
-        private void chapter4MenuItem_Click(object sender, EventArgs e)
-        {
-            Chapter4Form chapter4 = new Chapter4Form(selectedTasks[4]);
-            chapter4.Show();
-        }
-
-        private void chapter5MenuItem_Click(object sender, EventArgs e)
-        {
-            Chapter5Form chapter5 = new Chapter5Form(selectedTasks[5]);
-            chapter5.Show();
-        }
-
-        private void chapter7MenuItem_Click(object sender, EventArgs e)
-        {
-            Chapter7Form chapter7 = new Chapter7Form(selectedTasks[7]);
-            chapter7.Show();
-        }
-
-        private void settingsMenuItem_Click(object sender, EventArgs e)
-        {
-            SettingsForm form = new SettingsForm();
-            form.ShowDialog();
-        }
-
-        private void infoMenuItem_Click(object sender, EventArgs e)
-        {
-            InfoForm form = new InfoForm();
-            form.ShowDialog();
         }
     }
 }
