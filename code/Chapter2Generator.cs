@@ -27,7 +27,7 @@ namespace probability_theory_generator
                 A.Add(x);
                 if (yNum % 2 == 0)
                 {
-                    for (int i = 0; i <= 6; i += 2) B.Add(i);
+                    for (int i = 2; i <= 6; i += 2) B.Add(i);
                 }
                 else
                 {
@@ -51,7 +51,7 @@ namespace probability_theory_generator
                 A.Add(x);
                 if (yNum % 2 == 0)
                 {
-                    for (int i = 0; i <= 6; i += 2) B.Add(i);
+                    for (int i = 2; i <= 6; i += 2) B.Add(i);
                 }
                 else
                 {
@@ -83,7 +83,7 @@ namespace probability_theory_generator
                 }
                 else
                 {
-                    for (int i = 0; i <= 6; i += 2) B.Add(i);
+                    for (int i = 2; i <= 6; i += 2) B.Add(i);
                 }
 
                 A.IntersectWith(B);
@@ -100,7 +100,7 @@ namespace probability_theory_generator
             SolveB.Start();
             SolveC.Start();
 
-            Task.WaitAll(SolveA, SolveC);
+            Task.WaitAll(SolveA, SolveB, SolveC);
 
             TaskTemplate template = JSONReader.ReadJSON("Chapter2Task1.json");
             string text = template.Text;
